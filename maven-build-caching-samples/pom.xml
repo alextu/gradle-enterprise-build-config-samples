@@ -22,6 +22,7 @@
     <module>spring-cloud-contract-project</module>
     <module>duplicate-finder-project</module>
     <module>kotlin-project</module>
+    <module>swagger-codegen-v3-project</module>
 
     <!-- Webstart/JNLP only works when run with JDK 1.8 or earlier, so it is excluded by default. -->
     <!-- <module>webstart-project</module> -->
