@@ -1,0 +1,16 @@
+import java.lang.management.ManagementFactory
+import java.lang.management.MemoryPoolMXBean
+import java.lang.management.MemoryType
+
+buildScan { scan ->
+    buildFinished {
+        ManagementFactory.getPlatformMXBeans(MemoryPoolMXBean.class)
+            .stream()
+            .filter(p -> MemoryType.NON_HEAP == p.getType())
+            .filter(p -> p.getName().startsWith("CodeHeap"))
+            .filter(p -> p.getPeakUsage() != null)
+            .forEach(p -> {
+                scan.value("${p.name} Peak", "${p.peakUsage}")
+            })
+    }
+}
