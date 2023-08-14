@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <!-- todo: change groupId and artifactId to your own values -->
-    <groupId>com.example</groupId>
-    <artifactId>gradle-enterprise-conventions-maven-extension</artifactId>
-    <version>1.0</version>
+    <!-- CHANGE ME: change to your organization's group ID -->
+    <groupId>com.myorg</groupId>
+    <artifactId>convention-gradle-enterprise-maven-extension</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Convention Gradle Enterprise Maven Extension</name>
-    <description>A Maven extension to enable and configure Maven Build Scans in Gradle Enterprise</description>
+    <description>A Maven extension to apply and configure the Gradle Enterprise Maven Extension for com.myorg</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,7 +20,7 @@
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-core</artifactId>
-            <version>3.9.0</version>
+            <version>3.9.4</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -32,12 +32,12 @@
         <dependency>
             <groupId>com.gradle</groupId>
             <artifactId>gradle-enterprise-maven-extension</artifactId>
-            <version>1.16.5</version>
+            <version>1.18.1</version>
         </dependency>
         <dependency>
             <groupId>com.gradle</groupId>
             <artifactId>common-custom-user-data-maven-extension</artifactId>
-            <version>1.11.1</version>
+            <version>1.12.2</version>
         </dependency>
     </dependencies>
 

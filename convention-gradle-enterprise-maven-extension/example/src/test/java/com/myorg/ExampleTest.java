@@ -1,4 +1,4 @@
-package example;
+package com.myorg;
 
 import com.google.common.base.Joiner;
 
