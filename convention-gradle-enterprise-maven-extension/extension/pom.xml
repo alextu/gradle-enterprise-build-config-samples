@@ -7,7 +7,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>Gradle Enterprise Conventions Maven Extension</name>
+    <name>Convention Gradle Enterprise Maven Extension</name>
     <description>A Maven extension to enable and configure Maven Build Scans in Gradle Enterprise</description>
 
     <properties>
