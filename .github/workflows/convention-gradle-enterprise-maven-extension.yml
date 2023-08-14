@@ -22,14 +22,14 @@ jobs:
           cache: maven
       - name: Build Gradle Enterprise Conventions Maven Extension
         run: ./mvnw clean install -Dgradle.enterprise.url=https://ge.solutions-team.gradle.com
-        working-directory: gradle-enterprise-conventions-maven-extension/extension
+        working-directory: convention-gradle-enterprise-maven-extension/extension
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_SOLUTIONS_ACCESS_TOKEN }}
       - name: Upload extension
         uses: actions/upload-artifact@v3
         with:
-          name: gradle-enterprise-conventions-maven-extension
-          path: ~/.m2/repository/com/example/gradle-enterprise-conventions-maven-extension
+          name: convention-gradle-enterprise-maven-extension
+          path: ~/.m2/repository/com/myorg/convention-gradle-enterprise-maven-extension
   verification:
     name: Verify Example Build for Maven ${{ matrix.maven-version }}
     needs: [build]
@@ -49,15 +49,15 @@ jobs:
       - name: Download Extension
         uses: actions/download-artifact@v3
         with:
-          name: gradle-enterprise-conventions-maven-extension
-          path: ~/.m2/repository/com/example/gradle-enterprise-conventions-maven-extension
+          name: convention-gradle-enterprise-maven-extension
+          path: ~/.m2/repository/com/myorg/convention-gradle-enterprise-maven-extension
       - name: Set Maven Version
         run: ./mvnw wrapper:wrapper -Dmaven=${{ matrix.maven-version }} -Dgradle.enterprise.url=https://ge.solutions-team.gradle.com
-        working-directory: gradle-enterprise-conventions-maven-extension/example-build
+        working-directory: convention-gradle-enterprise-maven-extension/example
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_SOLUTIONS_ACCESS_TOKEN }}
       - name: Verify Example Build
         run: ./mvnw clean verify -Dgradle.enterprise.url=https://ge.solutions-team.gradle.com
-        working-directory: gradle-enterprise-conventions-maven-extension/example-build
+        working-directory: convention-gradle-enterprise-maven-extension/example
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_SOLUTIONS_ACCESS_TOKEN }}

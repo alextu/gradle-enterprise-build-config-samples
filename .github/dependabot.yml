@@ -48,7 +48,7 @@ updates:
       - dependency-name: "com.gradle:build-scan-plugin"
         versions: [ "1.16" ]
   - package-ecosystem: "maven"
-    directory: "gradle-enterprise-conventions-maven-extension/extension"
+    directory: "convention-gradle-enterprise-maven-extension/extension"
     schedule:
       interval: "daily"
       time: "02:00"
