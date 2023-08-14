@@ -15,7 +15,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-pmd-plugin</artifactId>
-        <version>3.20.0</version>
+        <version>3.21.0</version>
         <configuration>
           <format>txt</format>
           <benchmark>true</benchmark>
@@ -50,11 +50,19 @@
                             <name>compileSourceRoots</name>
                             <includesProperty>includes</includesProperty>
                             <excludesProperty>excludes</excludesProperty>
+                            <normalization>
+                              <ignoreLineEndings>true</ignoreLineEndings>
+                              <ignoreEmptyDirectories>true</ignoreEmptyDirectories>
+                            </normalization>
                           </fileSet>
                           <fileSet>
                             <name>testSourceRoots</name>
                             <includesProperty>includes</includesProperty>
                             <excludesProperty>excludes</excludesProperty>
+                            <normalization>
+                              <ignoreLineEndings>true</ignoreLineEndings>
+                              <ignoreEmptyDirectories>true</ignoreEmptyDirectories>
+                            </normalization>
                           </fileSet>
                           <fileSet>
                             <name>excludeFromFailureFile</name>

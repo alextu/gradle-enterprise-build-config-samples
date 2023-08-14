@@ -38,7 +38,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
-        <version>3.3.0</version>
+        <version>3.4.0</version>
         <executions>
           <execution>
             <phase>generate-sources</phase>
@@ -70,9 +70,17 @@
                     <fileSets>
                       <fileSet>
                         <name>sourceDirectory</name>
+                        <normalization>
+                          <ignoreLineEndings>true</ignoreLineEndings>
+                          <ignoreEmptyDirectories>true</ignoreEmptyDirectories>
+                        </normalization>
                       </fileSet>
                       <fileSet>
                         <name>libDirectory</name>
+                        <normalization>
+                          <ignoreLineEndings>true</ignoreLineEndings>
+                          <ignoreEmptyDirectories>true</ignoreEmptyDirectories>
+                        </normalization>
                       </fileSet>
                     </fileSets>
                     <properties>

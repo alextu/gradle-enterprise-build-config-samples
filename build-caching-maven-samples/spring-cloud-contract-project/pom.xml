@@ -14,7 +14,7 @@
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-contract-verifier</artifactId>
-      <version>4.0.1</version>
+      <version>4.0.4</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -24,7 +24,7 @@
       <plugin>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-contract-maven-plugin</artifactId>
-        <version>4.0.1</version>
+        <version>4.0.4</version>
         <extensions>true</extensions>
         <configuration></configuration>
       </plugin>
@@ -32,7 +32,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
-        <version>3.3.0</version>
+        <version>3.4.0</version>
         <executions>
           <execution>
             <phase>generate-test-sources</phase>
@@ -78,6 +78,10 @@
                             <name>contractsDirectory</name>
                             <excludesProperty>excludedFiles</excludesProperty>
                             <includesProperty>includedFiles</includesProperty>
+                            <normalization>
+                              <ignoreEmptyDirectories>true</ignoreEmptyDirectories>
+                              <ignoreLineEndings>true</ignoreLineEndings>
+                            </normalization>
                           </fileSet>
                         </fileSets>
                         <ignoredProperties>

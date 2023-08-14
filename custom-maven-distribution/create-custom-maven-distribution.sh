@@ -23,7 +23,7 @@
 #       ./create-custom-maven-distribution.sh https://gradle-enterprise.mycompany.com
 #
 
-maven_version=3.9.0
+maven_version=3.9.4
 maven_dir=apache-maven-${maven_version}
 maven_zip=${maven_dir}-bin.zip
 maven_lib_ext=${maven_dir}/lib/ext
@@ -32,10 +32,10 @@ maven_conf=${maven_dir}/conf
 custom_maven_version=1.0.0
 custom_maven_zip=${maven_dir}-sample-${custom_maven_version}-bin.zip
 
-ge_ext_version=1.16.5
+ge_ext_version=1.18.1
 ge_ext_jar=gradle-enterprise-maven-extension-${ge_ext_version}.jar
 
-ge_sample_ext_version=1.11.1
+ge_sample_ext_version=1.12.2
 ge_sample_ext_jar=common-custom-user-data-maven-extension-${ge_sample_ext_version}.jar
 
 ge_sample_ext_xml=gradle-enterprise.xml

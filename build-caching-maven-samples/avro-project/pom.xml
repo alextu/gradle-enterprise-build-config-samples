@@ -14,7 +14,7 @@
     <dependency>
       <groupId>org.apache.avro</groupId>
       <artifactId>avro</artifactId>
-      <version>1.11.1</version>
+      <version>1.11.2</version>
     </dependency>
   </dependencies>
 
@@ -23,7 +23,7 @@
       <plugin>
         <groupId>org.apache.avro</groupId>
         <artifactId>avro-maven-plugin</artifactId>
-        <version>1.11.1</version>
+        <version>1.11.2</version>
         <executions>
           <execution>
             <phase>generate-sources</phase>
@@ -41,7 +41,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
-        <version>3.3.0</version>
+        <version>3.4.0</version>
         <executions>
           <execution>
             <phase>generate-sources</phase>
@@ -75,6 +75,10 @@
                         <name>sourceDirectory</name>
                         <includesProperty>includes</includesProperty>
                         <excludesProperty>excludes</excludesProperty>
+                        <normalization>
+                          <ignoreEmptyDirectories>true</ignoreEmptyDirectories>
+                          <ignoreLineEndings>true</ignoreLineEndings>
+                        </normalization>
                       </fileSet>
                       <fileSet>
                         <name>testSourceDirectory</name>
