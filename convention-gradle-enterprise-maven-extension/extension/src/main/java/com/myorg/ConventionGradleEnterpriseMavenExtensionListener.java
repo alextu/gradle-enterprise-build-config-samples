@@ -23,7 +23,7 @@ public final class ConventionGradleEnterpriseMavenExtensionListener implements G
 
     private void configureGradleEnterprise(GradleEnterpriseApi gradleEnterprise) {
         // CHANGE ME: Apply your Gradle Enterprise configuration here
-        gradleEnterprise.getBuildScan().setServer("https://enterprise-samples.gradle.com");
+        gradleEnterprise.setServer("https://enterprise-samples.gradle.com");
         configureBuildScan(gradleEnterprise.getBuildScan());
     }
 
