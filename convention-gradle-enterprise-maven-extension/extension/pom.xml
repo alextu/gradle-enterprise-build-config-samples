@@ -37,7 +37,7 @@
         <dependency>
             <groupId>com.gradle</groupId>
             <artifactId>common-custom-user-data-maven-extension</artifactId>
-            <version>1.12.2</version>
+            <version>1.12.3</version>
         </dependency>
     </dependencies>
 
