@@ -1,0 +1,5 @@
+./gradlew clean build -Dgradle.enterprise.url=https://e.grdev.net
+
+cd maven/example
+
+./mvnw clean package -Dgradle.enterprise.url=https://e.grdev.net
