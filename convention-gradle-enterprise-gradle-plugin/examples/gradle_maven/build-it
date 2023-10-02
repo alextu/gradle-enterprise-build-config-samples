@@ -1,4 +1,4 @@
-./gradlew --no-daemon --refresh-dependencies --info clean build -Dgradle.enterprise.url=https://e.grdev.net || exit 1
+./gradlew --no-daemon --refresh-dependencies --info foo -Dgradle.enterprise.url=https://e.grdev.net || exit 1
 
 
 cd maven/example
