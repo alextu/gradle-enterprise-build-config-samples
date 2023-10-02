@@ -1,5 +1,6 @@
-./gradlew clean build -Dgradle.enterprise.url=https://e.grdev.net
+./gradlew --no-daemon --refresh-dependencies --info clean build -Dgradle.enterprise.url=https://e.grdev.net || exit 1
+
 
 cd maven/example
 
-./mvnw clean package -Dgradle.enterprise.url=https://e.grdev.net
+./mvnw clean package -Dgradle.enterprise.url=https://e.grdev.net || exit 1
